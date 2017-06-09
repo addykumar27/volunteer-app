@@ -1,24 +1,7 @@
-# README
+# LendAHand
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### It a community based app thats helps volunteers find their volunteering match. This app is more perosnable than other apps out there. 
 
-Things you may want to cover:
+#### It adds a comment feature for its users to be able to talk about their vounteeer experience after being part of one of these opportunties. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### The app is built with ruby on rails. 
