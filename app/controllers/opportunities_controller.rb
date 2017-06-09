@@ -1,0 +1,3 @@
+class OpportunitiesController < ApplicationController
+
+end
