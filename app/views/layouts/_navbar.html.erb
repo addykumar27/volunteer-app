@@ -1,0 +1,32 @@
+<header>
+  <div class="jumbotron-small navbar-fixed-top">
+    <div class="logo-left">
+      <a href="/"><p class="Lend">Lend</p><p class="A">A</p><p class="Hand">hand</p></a>
+    </div>
+    <span class= "flash_message">
+    <% flash.each do |name, msg| %>
+        <%= msg %>
+      <% end %>
+    </span>
+    <div class="pull-right dropdown">
+      <% if signed_in? %>
+        <div class="dropbtn">
+          Welcome, <%= current_user.first_name%>
+          <%= image_tag("dropdown.png", height: "30") %>
+        </div>
+        <div class="dropdown-content">
+          <%= link_to "View Profile", user_path(current_user) %>
+          <%= link_to "Settings", edit_user_registration_path(current_user) %>
+          <%= link_to "Healthcare", '/causes/Healthcare' %>
+          <%= link_to "Homeless&Housing", '/causes/homeless_and_housing' %>
+          <%= link_to "Children&Youth", '/causes/children_and_youth' %>
+          <%= link_to "Environment", '/causes/environment' %>
+          <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+        </div>
+      <% else %>
+        <%= button_to "Sign In", new_user_session_path %>
+        <%= button_to "Sign Up", new_user_registration_path, :method => :get %>
+      <% end %>
+    </div>
+  </div>
+</header>

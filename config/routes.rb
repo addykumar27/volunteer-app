@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get '/about', to: 'index#about'
 
-  get '/catergories/:catergory', to: 'categories#show', as: 'catergory'
+  get '/causes/:cause', to: 'causes#show', as: 'cause'
   get '/opportunities/', to: 'opportunities#index', as: 'opportunities'
   get  '/opportunities/:id', to: 'opportunities#show', as: 'opportunity'
   get '/users/:user_id', to: 'users#show', as: 'user'

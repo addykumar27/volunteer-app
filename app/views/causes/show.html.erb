@@ -1,0 +1,46 @@
+<%= render ('/layouts/navbar') %>
+<% # Navbar Start %>
+<div class="container-fluid">
+  <div class="row profile">
+    <div class="col-sm-3 col-md-3 col-lg-3">
+      <div class="profile-sidebar nav-stacked affix" id="sidebar">
+        <% # User Pic %>
+        <div class="profile-userpic">
+          <% if !current_user.nil? %>
+            <a href="/users/<%= current_user.username %>">
+              <%= image_tag current_user.avatar.url, class: "img-responsive" %>
+            </a>
+          <% end %>
+        </div>
+        <div class="profile-usermenu">
+          <ul class="nav add_tip">
+            <% if !current_user.nil? %>
+              <%= link_to "Add New Tip", new_user_tip_path(current_user) %>
+            <% end %>
+          </ul>
+          <ul class="nav">
+            <li>
+              <a href="/causes/Healthcare">
+                Healthcare
+              </a>
+            </li>
+            <li>
+              <a href="/causes/Homeless&Housing">
+                Homeless/Housing
+              </a>
+            </li>
+            <li>
+              <a href="/causes/Children&Youth">
+                Children/Youth
+              </a>
+            </li>
+            <li>
+              <a href="/causes/Environment">
+                Environment
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
