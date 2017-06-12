@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
  
-	
-	has_many :opportunities, through: :user_opps
+	has_many :useropps, dependent: :destroy
+	has_many :opportunities, through: :useropps
 end

@@ -1,0 +1,3 @@
+class UseroppController < ApplicationController
+
+end
