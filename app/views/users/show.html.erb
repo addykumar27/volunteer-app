@@ -1,0 +1,8 @@
+<%=render ('/layouts/largenavbar') %>
+
+<h1>Your profile page</h1>
+
+<%= link_to opportunity.cause, cause_path(opportunity.cause) %>
+  <% if current_user == @user %>
+<% end %>
+

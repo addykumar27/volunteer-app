@@ -21,43 +21,50 @@ $yellow: #FFF50D;
 $tan: #FFC90D;
 $yellow-gold: #FF962D; 
 
-//template 
+// LARGE NAVBAR
+
+a {
+   color: $aqua-blue;
+   font-size: 20px;
+   font-family:'Quicksand', sans-serif,'Nunito Sans', sans-serif;
+   float: left;
+   height: 50px;
+   padding: 15px 15px;
+   line-height: 20px;
+  }
+
+.navbar-right {
+  float: right !important;
+  margin-right: -15px;
+  font-family:'Quicksand', sans-serif,'Nunito Sans', sans-serif;
+  font-size: 10px;
+} 		  
+
+.navbar-fixed-top {
+  margin-bottom: 0;
+  border-radius: 0; 
+}
+  
 
 .jumbotron {
    margin: auto;
-   background-color: $tan;
+   background-image:url ("/images/jumbotron3.jpg");
+   background-color: $blue;
    color: white;
-   height: 150px;
+   height: 250px;
    clear: both;
    z-index: 100;
-         span {
-               font-size: 20px;
-        		margin-right: 10px;
-        	}
-     		
-     		a {
-       			color: $aqua-blue;
-       			font-size: 500px;
-       			font-family:'Quicksand', sans-serif,'Nunito Sans', sans-serif;
-     		  }
+   span {
+     font-size: 16px;
+     margin-right: 10px;
+     }
+     a {
+       color: $yellow-gold;
+     }
      a:hover {
        text-decoration: none;
-       color: white;
-             }
+       color: $light-grey;
+     }
    }
-
-.container-fluid {
-
-  text_align: center;
-
-}
-
-img {
-
- 
-  
-
-}
-
 
 

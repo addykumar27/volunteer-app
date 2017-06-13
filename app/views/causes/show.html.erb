@@ -1,4 +1,5 @@
-<%= render ('/layouts/navbar') %>
+<%= render ('/layouts/sidenavbar') %>
+
 <% # Navbar Start %>
 <div class="container-fluid">
   <div class="row profile">
@@ -7,40 +8,55 @@
         <% # User Pic %>
         <div class="profile-userpic">
           <% if !current_user.nil? %>
-            <a href="/users/<%= current_user.username %>">
-              <%= image_tag current_user.avatar.url, class: "img-responsive" %>
+            <a href="/users/<%= current_user.email %>">
             </a>
           <% end %>
         </div>
         <div class="profile-usermenu">
-          <ul class="nav add_tip">
+          <ul class="nav see_opp">
             <% if !current_user.nil? %>
-              <%= link_to "Add New Tip", new_user_tip_path(current_user) %>
+              <%= link_to "Add to favorites", user_opp_path(current_user) %>
             <% end %>
           </ul>
           <ul class="nav">
             <li>
-              <a href="/causes/Healthcare">
-                Healthcare
+              <a href="/causes/Human Rights & Advocacy">
+                Human Rights & Advocacy
               </a>
             </li>
             <li>
-              <a href="/causes/Homeless&Housing">
-                Homeless/Housing
+              <a href="/causes/Children & Youth">
+                Children & Youth
               </a>
             </li>
             <li>
-              <a href="/causes/Children&Youth">
-                Children/Youth
+              <a href="/causes/Homeless & Housing">
+                Homeless & Housing
               </a>
             </li>
             <li>
               <a href="/causes/Environment">
-                Environment
+                Enviroment
               </a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    
+
+    <div class="col-sm-9 col-md-9 col-lg-9">
+      <% if request.original_fullpath == '/causes/Human Rights & Advocacy"' %>
+        <h1 class="Human Rights & Advocacy">Human Rights & Advocacy</h1>
+      <% end %>
+      <% if request.original_fullpath == '/causes/Children & Youth' %>
+        <h1 class="Children & Youth">Children & Youth</h1>
+      <% end %>
+      <% if request.original_fullpath == '/causes/Homeless & Housing' %>
+        <h1 class="Homeless & Housing">Homeless & Housing</h1>
+      <% end %>
+      <% if request.original_fullpath == '/causes/Environment' %>
+        <h1 class="Environment">Environment</h1>
+      <% end %>
+   </div>
+ </div>
+</div>
