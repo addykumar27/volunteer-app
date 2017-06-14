@@ -1,0 +1,25 @@
+<%= render ('/layouts/largenavbar') %>
+
+<br><br><br>
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-7">
+
+<% @organizations.each do |organization| %>
+
+	<%= link_to orgs_path(organization) do %> 
+
+    <%= organization.name %> 
+  
+
+    <%= organization.location %>
+   
+    <%= organization.website %>
+ 
+<%end%>
+<%end%>
+
+       </div>
+    </div>
+</div>

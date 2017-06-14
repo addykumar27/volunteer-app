@@ -43,26 +43,25 @@ Coronado, CA92118", mission_statement:"Take Action to Solve the Climate Crisis: 
 opportunity_1 = Opportunity.create({cause: "Human Rights & Advocacy", image:"https://www.w3schools.com/css/trolltunga.jpg", name: "Receptionist Volunteers NEEDED at Women HIV Non-Profit in Oakland!", location:"389 30th street Oakland, CA94609", 
 	organization:organization_1})
 
-opportunity_2 = Opportunity.create({cause: "Human Rights & Advocacy",image:"https://www.w3schools.com/css/trolltunga.jpg",name:"Associate Board Member, Fundraising Committee", location:"540 Howard St,San Francisco, CA94105", 
+opportunity_2 = Opportunity.create({cause: "Human Rights & Advocacy", image:"https://www.w3schools.com/css/trolltunga.jpg",name:"Associate Board Member, Fundraising Committee", location:"540 Howard St,San Francisco, CA94105", 
 	organization:organization_4})
 
-opportunity_3 = Opportunity.create({cause: "Human Rights & Advocacy",image:"https://www.w3schools.com/css/trolltunga.jpg",name:"Coach Kids in San Francisco", location:"Throughout SF, San Francisco, CA 94102", 
+opportunity_3 = Opportunity.create({cause: "Children & Youth",image:"https://www.w3schools.com/css/trolltunga.jpg",name:"Coach Kids in San Francisco", location:"Throughout SF, San Francisco, CA 94102", 
 	organization:organization_3})
 
-opportunity_4 = Opportunity.create({cause: "Human Rights & Advocacy",
-	image:"https://www.w3schools.com/css/trolltunga.jpg", name:"Group Volunteering - Hygiene Sorting & Packing", location:"312 Mason
+opportunity_4 = Opportunity.create({cause: "Children & Youth", image:"https://www.w3schools.com/css/trolltunga.jpg", name:"Group Volunteering - Hygiene Sorting & Packing", location:"312 Mason
 San Francisco, CA94102",organization:organization_8})
 
-opportunity_5 = Opportunity.create({cause: "Human Rights & Advocacy",image:"https://www.w3schools.com/css/trolltunga.jpg", name:"Help Feed Low-income & Homeless Seniors", location:"350 Golden Gate Ave
+opportunity_5 = Opportunity.create({cause: "Homeless & Housing", image:"https://www.w3schools.com/css/trolltunga.jpg", name:"Help Feed Low-income & Homeless Seniors", location:"350 Golden Gate Ave
 San Francisco, CA94102", organization:organization_1})
 
-opportunity_6 = Opportunity.create({image:"https://www.w3schools.com/css/trolltunga.jpg", name:"Admin/Office work for Boys & Girls Clubs of San Francisco", location:"380 Fulton St
+opportunity_6 = Opportunity.create({cause: "Homeless & Housing", image:"https://www.w3schools.com/css/trolltunga.jpg", name:"Admin/Office work for Boys & Girls Clubs of San Francisco", location:"380 Fulton St
 San Francisco, CA94102", organization:organization_7})
 
-opportunity_7 = Opportunity.create({image:"https://www.w3schools.com/css/trolltunga.jpg", name:"For Anyone Who Loves Walking in San Francisco", location:"333 Hayes Street, Suite 202
+opportunity_7 = Opportunity.create({cause: "Environment", image:"https://www.w3schools.com/css/trolltunga.jpg", name:"For Anyone Who Loves Walking in San Francisco", location:"333 Hayes Street, Suite 202
 San Francisco", organization:organization_2})
 
-opportunity_8 = Opportunity.create({image:"https://www.w3schools.com/css/trolltunga.jpg",name:"Sustainable Climate Environment Advocate San Francisco", location:"Groups across the country and in San Francisco
+opportunity_8 = Opportunity.create({cause: "Environment", image:"https://www.w3schools.com/css/trolltunga.jpg",name:"Sustainable Climate Environment Advocate San Francisco", location:"Groups across the country and in San Francisco
 San Francisco, CA94102", organization:organization_5 })
 
 

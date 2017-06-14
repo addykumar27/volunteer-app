@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def show
-		#require_login
+		require_login
     	@user = User.find(params[:id])
  		if @user
       		login(@user)

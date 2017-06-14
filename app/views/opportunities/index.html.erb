@@ -1,8 +1,16 @@
+<%= render ('/layouts/largenavbar') %>
+
+<br><br><br>
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-sm-8">
 
 <% @opportunities.each do |opportunity| %>
 
 	<%= link_to opportunity_path(opportunity) do %>        
-    <%= opportunity.name %>
+    <%= opportunity.name %> 
+    <br>
     <%= opportunity.location %>
 <%end%>
 <%end%>
