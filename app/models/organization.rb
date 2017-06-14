@@ -1,3 +1,3 @@
 class Organization < ApplicationRecord
-	has_many :opportunity
+	has_many :opportunities
 end

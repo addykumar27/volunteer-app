@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/opportunities/', to: 'opportunities#index', as: 'opportunities'
   get  '/opportunities/:id', to: 'opportunities#show', as: 'opportunity'
   get '/users/:user_id', to: 'users#show', as: 'user'
+  get '/orgs/', to: 'org#index', as: 'orgs'
   get '/orgs/:id', to: 'org#show', as: 'org'
   post '/opportunities/:id/useropp', to: 'useropp#create', as: 'create_user_opp'
   delete '/users/:id/opportunity/:id', to: 'opp#destroy', as: 'delete_user_opp'

@@ -1,62 +1,12 @@
-<%= render ('/layouts/sidenavbar') %>
+<%= render ('/layouts/largenavbar') %>
 
-<% # Navbar Start %>
-<div class="container-fluid">
-  <div class="row profile">
-    <div class="col-sm-3 col-md-3 col-lg-3">
-      <div class="profile-sidebar nav-stacked affix" id="sidebar">
-        <% # User Pic %>
-        <div class="profile-userpic">
-          <% if !current_user.nil? %>
-            <a href="/users/<%= current_user.email %>">
-            </a>
-          <% end %>
-        </div>
-        <div class="profile-usermenu">
-          <ul class="nav see_opp">
-            <% if !current_user.nil? %>
-              <%= link_to "Add to favorites", user_opp_path(current_user) %>
+<br><br><br>
+
+
+ <% @opportunities.each do |opportunity| %>
+            <%= link_to opportunity_path(opportunity) do %>
+              <%= image_tag opportunity.image, class: "some css class here" %>
             <% end %>
-          </ul>
-          <ul class="nav">
-            <li>
-              <a href="/causes/Human Rights & Advocacy">
-                Human Rights & Advocacy
-              </a>
-            </li>
-            <li>
-              <a href="/causes/Children & Youth">
-                Children & Youth
-              </a>
-            </li>
-            <li>
-              <a href="/causes/Homeless & Housing">
-                Homeless & Housing
-              </a>
-            </li>
-            <li>
-              <a href="/causes/Environment">
-                Enviroment
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+            <% end %>
 
-    <div class="col-sm-9 col-md-9 col-lg-9">
-      <% if request.original_fullpath == '/causes/Human Rights & Advocacy"' %>
-        <h1 class="Human Rights & Advocacy">Human Rights & Advocacy</h1>
-      <% end %>
-      <% if request.original_fullpath == '/causes/Children & Youth' %>
-        <h1 class="Children & Youth">Children & Youth</h1>
-      <% end %>
-      <% if request.original_fullpath == '/causes/Homeless & Housing' %>
-        <h1 class="Homeless & Housing">Homeless & Housing</h1>
-      <% end %>
-      <% if request.original_fullpath == '/causes/Environment' %>
-        <h1 class="Environment">Environment</h1>
-      <% end %>
-   </div>
- </div>
-</div>
+      
