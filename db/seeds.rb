@@ -65,14 +65,14 @@ opportunity_8 = Opportunity.create({cause: "Environment", image:"https://www.w3s
 San Francisco, CA94102", organization:organization_5 })
 
 
-user_1 = User.create ({first_name: "Lily", last_name: "Corner", location: "San Francisco",opportunity: "Receptionist Volunteers NEEDED at Women HIV Non-Profit in Oakland!", email:"test@com", password:"123456"})
-user_2 = User.create ({first_name: "Cathy", last_name: "Palmer", location: "San Francisco", opportunity: "Associate Board Member, Fundraising Committee",email:"test1@com", password:"123456" })
-user_3 = User.create ({first_name: "Laila", last_name: "Jones", location: "San Francisco", opportunity: "Coach Kids in San Francisco",email:"test2@com", password:"123456"})
-user_4 = User.create ({first_name: "Cindy", last_name: "Path", location: "San Francisco", opportunity: "Group Volunteering - Hygiene Sorting & Packing",email:"test3@com", password:"123456"})
-user_5 = User.create ({first_name: "Rita", last_name: "Levis", location: "San Francisco", opportunity: "Help Feed Low-income & Homeless Seniors",email:"test5@com", password:"123456"}) 
-user_6 = User.create ({first_name: "Julie", last_name: "Keith", location: "San Francisco", opportunity: "Admin/Office work for Boys & Girls Clubs of San Francisco",email:"test6@com", password:"123456"})
-user_7 = User.create ({first_name: "William", last_name: "Spicey", location: "San Francisco", opportunity: "For Anyone Who Loves Walking in San Francisco",email:"test7@com", password:"123456"})
-user_8 = User.create ({first_name: "Kevin", last_name: "James", location: "San Francisco", opportunity: "Sustainable Climate Environment Advocate San Francisco",email:"test8@com", password:"123456"})
+user_1 = User.create ({first_name: "Lily", last_name: "Corner", location: "San Francisco",opportunity: "Receptionist Volunteers NEEDED at Women HIV Non-Profit in Oakland!", email:"test@com", password:"123456", username:"num1"})
+user_2 = User.create ({first_name: "Cathy", last_name: "Palmer", location: "San Francisco", opportunity: "Associate Board Member, Fundraising Committee",email:"test1@com", password:"123456",username:"num2" })
+user_3 = User.create ({first_name: "Laila", last_name: "Jones", location: "San Francisco", opportunity: "Coach Kids in San Francisco",email:"test2@com", password:"123456",username:"num3"})
+user_4 = User.create ({first_name: "Cindy", last_name: "Path", location: "San Francisco", opportunity: "Group Volunteering - Hygiene Sorting & Packing",email:"test3@com", password:"123456",username:"num4"})
+user_5 = User.create ({first_name: "Rita", last_name: "Levis", location: "San Francisco", opportunity: "Help Feed Low-income & Homeless Seniors",email:"test5@com", password:"123456",username:"num5"}) 
+user_6 = User.create ({first_name: "Julie", last_name: "Keith", location: "San Francisco", opportunity: "Admin/Office work for Boys & Girls Clubs of San Francisco",email:"test6@com", password:"123456",username:"num6"})
+user_7 = User.create ({first_name: "William", last_name: "Spicey", location: "San Francisco", opportunity: "For Anyone Who Loves Walking in San Francisco",email:"test7@com", password:"123456",username:"num7"})
+user_8 = User.create ({first_name: "Kevin", last_name: "James", location: "San Francisco", opportunity: "Sustainable Climate Environment Advocate San Francisco",email:"test8@com", password:"123456",username:"num8"})
 
 
 user_opp = [

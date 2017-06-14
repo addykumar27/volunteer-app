@@ -1,19 +1,24 @@
 class UsersController < ApplicationController
 
-	def index
+  #get '/users/', to: 'users#index', as: 'users'
+  def index
     @users = User.all
   end
 
+  #get '/users/:user_id', to: 'users#show', as: 'user'
   def show
-		require_login
-    	@user = User.find(params[:id])
- 		if @user
-      		login(@user)
-      		flash[:notice] = "Successfully logged in."      
-      	else
-      		flash[:error] = "Incorrect email or password."  
-      		redirect_to login_path
-      end
-  	end
+    set_user
+    @opportunities = @user.opportunities
+  end
+
+  private
+
+  def set_user
+    @user = User.find(params[:user_id])
+  end
+
+  def user_params
+    params.require(:user).permit(:username)
+  end
 
 end
