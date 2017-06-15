@@ -1,10 +1,8 @@
 <%= render ('/layouts/largenavbar') %>
 
-<div class="container-fluid">
-  <div class="row profile">
-    <div class="col-sm-3 col-md-3 col-lg-3">
-    <div class="col-sm-9 col-md-9 col-lg-9">
-      
+  <div class="col-sm-12">
+
+      <br><br><br>    
      <% if request.original_fullpath == '/causes/Human Rights & Advocacy' %>
         <h1 class="Human Rights & Advocacy">Human Rights & Advocacy</h1>
       <% end %>
@@ -17,35 +15,22 @@
       <% if request.original_fullpath == '/causes/Environment' %>
         <h1 class="Environment">Environment</h1>
       <% end %>
-      
-      <% @opportunities.each do |opportunity| %>
-        <div class="container-fluid allopps">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">  
-                <div class="container-fluid content">
-                  <div class="col-sm-8">
-                    <div class="pull-left">
-                       <%= link_to opportunity.name, opportunities_path(opportunity.name) %>
-                    </div>
-                  </div>
-                </div>
-                <div class="pull-left">
-                  <%= link_to opportunity.cause, opportunities_path(opportunity.cause) %>
-                  
-                  <% if !current_user.nil? && current_user == opportunity.useropps %>
-                    <%= link_to delete_opp_path(current_user, opportunity), data: { confirm: "Are you sure you want to remove this from your list?" }, method: :delete do %>
+        <div class="container " >        
+            <% @opportunities.each do |opportunity| %>
+              <div class="col-sm-8 col-sm-offset-2 causebox" style= "background-color:blue;">
+               <%= link_to opportunity.cause, opportunities_path(opportunity.cause) %>
+               <%= link_to opportunity.name, opportunities_path(opportunity.name) %>
+               <%= link_to opportunity.location, opportunities_path(opportunity.location) %>                      
+                 <% if !current_user.nil? && current_user == opportunity.useropps %>
+                  <%= link_to delete_opp_path(current_user, opportunity), data: { confirm: "Are you sure you want to remove this from your list?" }, method: :delete do %>
                       <span class="glyphicon glyphicon-remove"></span>
-                    <% end %>
-                  <%= opportunity.created_at.strftime("%a, %b %d, %Y @ %l:%M %p %Z") %>
+                     <% end %>
+                 <%= opportunity.created_at.strftime("%a, %b %d, %Y @ %l:%M %p %Z") %>
                   <% end %>
-                </div>
-              </div>
-            </div>
+              </div>        
+            <% end %>
         </div>
-      <% end %>
-    </div>
+   
   </div>
-</div>
-</div>
 
       
