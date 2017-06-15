@@ -1,32 +1,28 @@
 <%= render ('/layouts/largenavbar') %>
+<br><br><br> <br><br><br> 
+
+<div class="container">        
+            <% @opportunities.each do |opportunity| %>
+              <div class="col-sm-8 col-sm-offset-2 causebox" style= "border:0px solid #ccc;">
+               <%= link_to opportunity.cause %>
+              </div> 
+               <% break %>       
+            <% end %>
+        </div>
 
   <div class="col-sm-12">
 
       <br><br><br>    
-     <% if request.original_fullpath == '/causes/Human Rights & Advocacy' %>
-        <h1 class="Human Rights & Advocacy">Human Rights & Advocacy</h1>
-      <% end %>
-      <% if request.original_fullpath == '/causes/Children & Youth' %>
-        <h1 class="Children & Youth">Children & Youth</h1>
-      <% end %>
-      <% if request.original_fullpath == '/causes/Homeless & Housing' %>
-        <h1 class="Homeless & Housing">Homeless & Housing</h1>
-      <% end %>
-      <% if request.original_fullpath == '/causes/Environment' %>
-        <h1 class="Environment">Environment</h1>
-      <% end %>
-        <div class="container " >        
+     
+        <div class="container">        
             <% @opportunities.each do |opportunity| %>
-              <div class="col-sm-8 col-sm-offset-2 causebox" style= "background-color:blue;">
-               <%= link_to opportunity.cause, opportunities_path(opportunity.cause) %>
-               <%= link_to opportunity.name, opportunities_path(opportunity.name) %>
-               <%= link_to opportunity.location, opportunities_path(opportunity.location) %>                      
-                 <% if !current_user.nil? && current_user == opportunity.useropps %>
-                  <%= link_to delete_opp_path(current_user, opportunity), data: { confirm: "Are you sure you want to remove this from your list?" }, method: :delete do %>
-                      <span class="glyphicon glyphicon-remove"></span>
-                     <% end %>
-                 <%= opportunity.created_at.strftime("%a, %b %d, %Y @ %l:%M %p %Z") %>
-                  <% end %>
+              <div class="col-sm-8 col-sm-offset-2 causebox" style= "border:10px solid #ccc;background-color: #fcf8e3;">
+                
+               <%= link_to opportunity.name, opportunity_path(opportunity.id) %>
+               <br><br><br>
+               <%= opportunity.location%>                           
+                 <% opportunity.created_at.strftime("%a, %b %d, %Y @ %l:%M %p %Z") %>
+                  
               </div>        
             <% end %>
         </div>

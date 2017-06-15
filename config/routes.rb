@@ -20,9 +20,9 @@ Rails.application.routes.draw do
   post '/opportunities/:id/useropp', to: 'useropp#create', as: 'create_user_opp'
   post '/opportunities', to: 'opportunities#create'
   post '/organizations', to: 'organizations#create'
-  delete '/organizations/:id', to: 'organization#destroy', as: 'delete_org'
-  delete '/opportunities/:id', to: 'opportunity#destroy', as: 'delete_opp'
-  delete '/users/:id/opportunity/:id', to: 'opp#destroy', as: 'delete_user_opp'
+  delete '/opportunities/:id', to: 'opportunities#destroy', as: 'destroy_opp'
+  delete '/organizations/:id', to: 'organizations#destroy', as: 'destroy_org'
+ 
 
   # route to redirect users to root if they enter invalid URL
   match '*path', to: 'index#index', via: :all

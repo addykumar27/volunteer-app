@@ -1,6 +1,7 @@
 <%= render ('/layouts/largenavbar') %>
 
 <br><br><br>
+     <h1>&#160;&#160;&#160;&#160;Current Opportunities</h1>
 
 <div class="container">
 	<div class="row justify-content-center">
@@ -14,8 +15,17 @@
     <%= opportunity.location %>
 <%end%>
 <%end%>
+</div>
+</div>
+<br>
+<br><br>
 
-<%= link_to "Add New Opp", newopp_path, class: "Add New" %> 
+<button type="button" class="btn "><%= link_to "Add New Opp", newopp_path, class: "Add New" %> </button>
+
+
+
+</div>
+
 
 
 

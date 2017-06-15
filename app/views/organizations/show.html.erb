@@ -1,16 +1,18 @@
 <%= render ('/layouts/largenavbar') %>
-
-   
+  
   <br><br><br>
-       <div class="row">
-           <div class="col-sm-8">
-                <h4><%= @organization.name %></h4>            
-                  
-                <%= @organization %>
-
-              
-            </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <p><%= @organization.name %></hp> 
+            <p> <%=@organization.location %></p>
+            <p> <%=@organization.mission_statement %></p>
+            <p> <%=@organization.description %></p>
+            <p><%= @organization.website %></p>       
+        </div>    
+    	<div>
+        	<%= link_to "Delete Org", destroy_org_path(@organization), method: :delete%>
         </div>
+    </div>
                    
                
         

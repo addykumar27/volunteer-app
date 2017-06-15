@@ -18,6 +18,15 @@ end
  end
 
 
+ def destroy 
+     set_org  
+     @organization.destroy
+     respond_to do |format|
+      format.html { redirect_to opportunities_path, notice: 'Organization was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+   end
+
 private
 
 def set_org
