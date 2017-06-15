@@ -1,0 +1,14 @@
+<%= form_for @opportunity do |f| %>
+  <div>
+    <%= f.text_field :name, placeholder: "Name" %>
+  </div>
+  <div>
+    <%= f.text_field :location, placeholder: "location" %>
+  </div> 
+  <div>
+    <%= f.text_field :cause, placeholder: "cause" %>
+  </div>
+
+<%console %>
+  <%= f.submit %>
+<% end %>

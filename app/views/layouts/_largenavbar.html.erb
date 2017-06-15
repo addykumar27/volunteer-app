@@ -47,7 +47,7 @@
             <div class="pull-right">
                <% if signed_in? %>
                <span>
-               Welcome, #{link_to current_user.first_name, user_path(current_user)}.
+               Welcome, <%= link_to current_user.first_name, user_path(current_user) %>
                <%= link_to edit_user_registration_path(current_user) do %>
                <span class="glyphicon glyphicon-cog"></span>
                <% end %>

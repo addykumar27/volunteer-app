@@ -7,8 +7,17 @@
            <div class="col-sm-8">
                 <h4><%= @opportunity.name %></h4>            
                   
-                   
-                <a class="btn btn-primary" href="#">Add to favorites</a>
+                <div class= "favorites"> 
+                <% if signed_in? %>
+                <% unless current_user.favorite_opportunities.exists?(id: @opportunity.id) %>
+				<%= link_to 'Add to favorites', favorite_opportunities_path(opportunity_id: @opportunity), method: :post %>
+				<% else  %>
+				<%= link_to 'Remove from favorites', favorite_opportunity_path(@opportunity), method: :delete %>
+				<% end %>
+				<% end %>
+				</div>
+				<%= link_to "Delete Opp", delete_opp_path(@opportunity), method: :delete%>
             </div>
         </div>
    
+   <%= console %>

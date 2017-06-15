@@ -1,14 +1,18 @@
 class UsersController < ApplicationController
 
+  
+
   #get '/users/', to: 'users#index', as: 'users'
   def index
     @users = User.all
+
   end
 
   #get '/users/:user_id', to: 'users#show', as: 'user'
   def show
     set_user
     @opportunities = @user.opportunities
+    @opp = @user.favorite_opportunities
   end
 
   private

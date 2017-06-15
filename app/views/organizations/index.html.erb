@@ -8,17 +8,20 @@
 
 <% @organizations.each do |organization| %>
 
-	<%= link_to orgs_path(organization) do %> 
+	<%= link_to org_path(organization) do %> 
 
     <%= organization.name %> 
   
-
     <%= organization.location %>
    
     <%= organization.website %>
- 
+
+
 <%end%>
 <%end%>
+
+ <%= link_to "Add New Org", neworg_path, class: "Add New" %>
+
 
        </div>
     </div>

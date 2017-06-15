@@ -8,9 +8,8 @@ class CausesController < ApplicationController
     cause_type = params[:cause]
     cause_type.gsub! '%20', ' '
     # find all opportunities for that cause
-    # @opportunities = Opportunity.where(cause: cause_type)
-    @opportunities = Opportunity.where("cause ILIKE 'ENVIRONMENT'")
-    
+    @opportunities = Opportunity.where(cause: cause_type)
+    # @opportunities = Opportunity.where("cause ILIKE 'ENVIRONMENT'")
   end
 
 end

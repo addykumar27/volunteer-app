@@ -7,18 +7,23 @@ class OpportunitiesController < ApplicationController
     set_opp
   end
 
-  def destroy 
+  def new
+    @opportunity = Opportunity.new
+  end
+  
+  def create
+    @opportunity = Opportunity.create(opportunity_params)
+    redirect_to opportunities_path
+    end
+  
 
-#   	@Opportunity = Opportunity.find(params[:id]
-#   	@user = User.find(params[:user_id])
-#     if @user == current_user
-#       @Opportunity.destroy
-#       redirect_to @user
-#       flash[:notice] = "Deleted!"
-#     else
-#       redirect_to @user
-#       flash[:notice] = "Sorry, you can only delete your own comments!"
-#     end
+    def destroy 
+     set_opp  
+     @opportunity.destroy
+     respond_to do |format|
+      format.html { redirect_to opportunities_path, notice: 'Opportunity was successfully destroyed.' }
+      format.json { head :no_content }
+    end
    end
 
 private
@@ -30,4 +35,8 @@ private
 def set_user
     @user = User.find(params[:user_id])
   end
+
+def opportunity_params
+  params.require(:opportunity).permit(:name, :location, :cause)
+end
  end
