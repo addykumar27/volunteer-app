@@ -14,9 +14,9 @@
                <% if signed_in? %>
                  <% unless current_user.favorite_opportunities.exists?(id: @opportunity.id) %>
 		 <%= link_to 'Add to favorites', favorite_opportunities_path(opportunity_id: @opportunity), method: :post %>
-	       <% else  %>
+	        <% else  %>
 		 <%= link_to 'Remove from favorites', favorite_opportunity_path(@opportunity), method: :delete %>
-	       <% end %>
+	        <% end %>
 
 #### Challenges
 
