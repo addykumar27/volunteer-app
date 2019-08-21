@@ -1,4 +1,4 @@
-## Lend A Hand
+## Lend A Hand - https://mysterious-dawn-12546.herokuapp.com/
 
 ##### It a community based app thats helps volunteers find their volunteering match. This is currently an information web app with a scope of adding additional external API's and organizational features for users.
 
